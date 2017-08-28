@@ -148,6 +148,7 @@
 			<version>1.0</version>
 			<scope>provided</scope>
 		</dependency>
+<!-- 配置DBCP -->
 	<dependency>  
         <groupId>commons-dbcp</groupId>  
         <artifactId>commons-dbcp</artifactId>  

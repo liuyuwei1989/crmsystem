@@ -3,18 +3,35 @@ package com.crm.entity;
 import java.math.BigDecimal;
 
 public class Product {
+	/**
+	 * 商品编号
+	 */
     private BigDecimal prodId;
+    /**
+     * 商品名称
+     */
 
     private String prodName;
 
+    /**
+     * 商品类型
+     */
     private String prodType;
-
+	/**
+	 * 商品批次
+	 */
     private String prodBatch;
-
+	/**
+	 * 商品单位
+	 */
     private String prodUnit;
-
+	/**
+	 * 商品价格
+	 */
     private Double prodPrice;
-
+	/**
+	 * 商品备忘录
+	 */
     private String prodMemo;
 
     public BigDecimal getProdId() {

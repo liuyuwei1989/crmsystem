@@ -3,15 +3,30 @@ package com.crm.entity;
 import java.math.BigDecimal;
 
 public class Storage {
+	/**
+	 * 仓库编号
+	 */
     private BigDecimal stkId;
-
+	/**
+	 * 仓库和商品外键
+	 */
     private BigDecimal stkProdId;
-
+	/**
+	 * 仓库地址
+	 */
     private String stkWarehouse;
-
+	/**
+	 * 仓库批次
+	 */
     private String stkWare;
+    /**
+     * 仓库商品数量
+     */
 
     private Long stkCount;
+    /**
+     * 仓库说明
+     */
 
     private String stkMemo;
 

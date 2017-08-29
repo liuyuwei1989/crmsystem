@@ -1,10 +1,6 @@
 # Compiled class file
 *.class
-##ignore this file##
-/target/ 
-.classpath
-.project
-.settings   
+ 
 
 # Log file
 *.log
@@ -14,7 +10,10 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-.settings/
+
+.classpath
+.project
+.settings   
 # Package Files #
 *.jar
 *.war

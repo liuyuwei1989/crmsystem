@@ -3,55 +3,55 @@ package com.crm.entity;
 public class CstLinkman {
     /**
      *
-     * ¿Í»§ÁªÏµÈËÎ¨Ò»±êÊ¶
+     * å®¢æˆ·è”ç³»äººå”¯ä¸€æ ‡è¯†
      */
     private Integer lkmId;
 
     /**
      *
-     * ÁªÏµÈËËùÊô¿Í»§Î¨Ò»±êÊ¶
+     * è”ç³»äººæ‰€å±å®¢æˆ·å”¯ä¸€æ ‡è¯†
      */
     private String lkmCustNo;
 
     /**
      *
-     * ÁªÏµÈËËùÊô¿Í»§ĞÕÃû
+     * è”ç³»äººæ‰€å±å®¢æˆ·å§“å
      */
     private String lkmCustName;
 
     /**
      *
-     * ÁªÏµÈËĞÕÃû
+     * è”ç³»äººå§“å
      */
     private String lkmName;
 
     /**
      *
-     * ÁªÏµÈËĞÔ±ğ
+     * è”ç³»äººæ€§åˆ«
      */
     private String lkmSex;
 
     /**
      *
-     * ÁªÏµÈË¼¶±ğ
+     * è”ç³»äººçº§åˆ«
      */
     private String lkmPostion;
 
     /**
      *
-     * ÁªÏµÈËµç»°
+     * è”ç³»äººç”µè¯
      */
     private String lkmTel;
 
     /**
      *
-     * ÁªÏµÈËÊÖ»ú
+     * è”ç³»äººæ‰‹æœº
      */
     private String lkmMobile;
 
     /**
      *
-     * ÁªÏµÈË±¸×¢
+     * è”ç³»äººå¤‡æ³¨
      */
     private String lkmMemo;
 

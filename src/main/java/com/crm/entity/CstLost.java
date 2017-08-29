@@ -6,61 +6,61 @@ import java.util.Date;
 public class CstLost {
     /**
      *
-     * ¶ªÊ§¿Í»§±íÄÚ±êÊ¶
+     * ä¸¢å¤±å®¢æˆ·è¡¨å†…æ ‡è¯†
      */
     private BigDecimal lstId;
 
     /**
      *
-     * ¿Í»§±êÊ¶
+     * å®¢æˆ·æ ‡è¯†
      */
     private String lstCustNo;
 
     /**
      *
-     * ¿Í»§ĞÕÃû
+     * å®¢æˆ·å§“å
      */
     private String lstCustName;
 
     /**
      *
-     * ¿Í»§¹ÜÀíÈËID
+     * å®¢æˆ·ç®¡ç†äººID
      */
     private BigDecimal lstCustManagerId;
 
     /**
      *
-     * ¿Í»§¹ÜÀíÈËĞÕÃû
+     * å®¢æˆ·ç®¡ç†äººå§“å
      */
     private String lstCustManagerName;
 
     /**
      *
-     * ÉÏÒ»´Î½»Ò×ÈÕÆÚ
+     * ä¸Šä¸€æ¬¡äº¤æ˜“æ—¥æœŸ
      */
     private Date lstLastOrderDate;
 
     /**
      *
-     * È·ÈÏ¶ªÊ§ÈÕÆÚ
+     * ç¡®è®¤ä¸¢å¤±æ—¥æœŸ
      */
     private Date lstLostDate;
 
     /**
      *
-     * ÑÓ»º¶ªÊ§½â¾ö·½°¸
+     * å»¶ç¼“ä¸¢å¤±è§£å†³æ–¹æ¡ˆ
      */
     private String lstDelay;
 
     /**
      *
-     * ¶ªÊ§¿Í»§Ô­Òò
+     * ä¸¢å¤±å®¢æˆ·åŸå› 
      */
     private String lstReason;
 
     /**
      *
-     * ¶ªÊ§¿Í»§×´Ì¬±êÊ¶
+     * ä¸¢å¤±å®¢æˆ·çŠ¶æ€æ ‡è¯†
      */
     private String lstStatus;
 

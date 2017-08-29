@@ -6,115 +6,115 @@ import java.util.Date;
 public class CstService {
     /**
      *
-     * ·şÎñµÄÎ¨Ò»±àºÅ
+     * æœåŠ¡çš„å”¯ä¸€ç¼–å·
      */
     private BigDecimal svrId;
 
     /**
      *
-     * ·şÎñÀàĞÍ
+     * æœåŠ¡ç±»å‹
      */
     private String svrType;
 
     /**
      *
-     * ·şÎñ¸ÅÒª
+     * æœåŠ¡æ¦‚è¦
      */
     private String svrTitle;
 
     /**
      *
-     * ¿Í»§±àÂëÍâ¼ü
+     * å®¢æˆ·ç¼–ç å¤–é”®
      */
     private String svrCustNo;
 
     /**
      *
-     * ¿Í»§Ãû³Æ
+     * å®¢æˆ·åç§°
      */
     private String svrCustName;
 
     /**
      *
-     *  ·şÎñ×´Ì¬
+     *  æœåŠ¡çŠ¶æ€
      */
     private String svrStatus;
 
     /**
      *
-     * ÏêÏ¸ÃèÊö
+     * è¯¦ç»†æè¿°
      */
     private String svrRequest;
 
     /**
      *
-     * ·şÎñ´´½¨ÈËµÄ±àºÅ
+     * æœåŠ¡åˆ›å»ºäººçš„ç¼–å·
      */
     private BigDecimal svrCreateId;
 
     /**
      *
-     * ·şÎñ´´½¨ÈË
+     * æœåŠ¡åˆ›å»ºäºº
      */
     private String svrCreateBy;
 
     /**
      *
-     * ·şÎñ´´½¨Ê±¼ä
+     * æœåŠ¡åˆ›å»ºæ—¶é—´
      */
     private Date svrCreateDate;
 
     /**
      *
-     * ¾­Àí±àºÅ
+     * ç»ç†ç¼–å·
      */
     private BigDecimal svrDueId;
 
     /**
      *
-     * ·ÖÅä·şÎñ¸ø¾­Àí
+     * åˆ†é…æœåŠ¡ç»™ç»ç†
      */
     private String svrDueTo;
 
     /**
      *
-     * ·ÖÅäÊ±¼ä
+     * åˆ†é…æ—¶é—´
      */
     private Date svrDueDate;
 
     /**
      *
-     * ´¦Àí·½·¨
+     * å¤„ç†æ–¹æ³•
      */
     private String svrDeal;
 
     /**
      *
-     * ´¦ÀíÈËµÄ±àºÅ
+     * å¤„ç†äººçš„ç¼–å·
      */
     private BigDecimal svrDealId;
 
     /**
      *
-     * ´¦ÀíÈË
+     * å¤„ç†äºº
      */
     private String svrDealBy;
 
     /**
      *
-     * ´¦ÀíÊ±¼ä
+     * å¤„ç†æ—¶é—´
      */
     private Date svrDealDate;
 
     /**
      *
-     * ´¦Àí½á¹û
+     * å¤„ç†ç»“æœ
      */
     private String svrResult;
 
     /**
      *
-     * ¿Í»§ÂúÒâ¶È
+     * å®¢æˆ·æ»¡æ„åº¦
      */
     private Long svrSatisfy;
 

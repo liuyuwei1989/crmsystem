@@ -3,16 +3,29 @@ package com.crm.entity;
 import java.math.BigDecimal;
 
 public class OrdersLine {
+	/**
+	 * 行唯一标识
+	 */
     private BigDecimal oddId;
-
+    /**
+	 * 订单ID
+	 */
     private BigDecimal oddOrderId;
-
+    /**
+	 * 商品ID
+	 */
     private BigDecimal oddProdId;
-
+    /**
+	 * 商品数量
+	 */
     private Long oddCount;
-
+    /**
+	 * 商品单位
+	 */
     private String oddUnit;
-
+    /**
+	 * 商品价格
+	 */
     private Double oddPrice;
 
     public BigDecimal getOddId() {

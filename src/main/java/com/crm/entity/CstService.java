@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class CstService {
+<<<<<<< HEAD
 	
 	/**
 	 * 服务表id
@@ -16,24 +17,51 @@ public class CstService {
 
     /**
      * 咨询的方式
+=======
+    /**
+     *
+     * 服务的唯一编号
+     */
+    private BigDecimal svrId;
+
+    /**
+     *
+     * 服务类型
+>>>>>>> 1453d2971f83009e6d250beeaaa17367f95960e6
      */
     private String svrType;
 
     /**
+<<<<<<< HEAD
      * 咨询的内容
+=======
+     *
+     * 服务概要
+>>>>>>> 1453d2971f83009e6d250beeaaa17367f95960e6
      */
     private String svrTitle;
 
     /**
+<<<<<<< HEAD
      * 客户编号
+=======
+     *
+     * 客户编码外键
+>>>>>>> 1453d2971f83009e6d250beeaaa17367f95960e6
      */
     private String svrCustNo;
     /**
+<<<<<<< HEAD
      * 客户姓名
+=======
+     *
+     * 客户名称
+>>>>>>> 1453d2971f83009e6d250beeaaa17367f95960e6
      */
     private String svrCustName;
 
     /**
+<<<<<<< HEAD
      * 服务状态
      */
     private String svrStatus;
@@ -79,10 +107,68 @@ public class CstService {
     private String svrDeal;
 
     /**
+=======
+     *
+     *  服务状态
+     */
+    private String svrStatus;
+
+    /**
+     *
+     * 详细描述
+     */
+    private String svrRequest;
+
+    /**
+     *
+     * 服务创建人的编号
+     */
+    private BigDecimal svrCreateId;
+
+    /**
+     *
+     * 服务创建人
+     */
+    private String svrCreateBy;
+
+    /**
+     *
+     * 服务创建时间
+     */
+    private Date svrCreateDate;
+
+    /**
+     *
+     * 经理编号
+     */
+    private BigDecimal svrDueId;
+
+    /**
+     *
+     * 分配服务给经理
+     */
+    private String svrDueTo;
+
+    /**
+     *
+     * 分配时间
+     */
+    private Date svrDueDate;
+
+    /**
+     *
+     * 处理方法
+     */
+    private String svrDeal;
+
+    /**
+     *
+>>>>>>> 1453d2971f83009e6d250beeaaa17367f95960e6
      * 处理人的编号
      */
     private BigDecimal svrDealId;
 
+<<<<<<< HEAD
    /**
     * 处理人
     */
@@ -100,6 +186,30 @@ public class CstService {
    /**
     * 处理的满意度
     */
+=======
+    /**
+     *
+     * 处理人
+     */
+    private String svrDealBy;
+
+    /**
+     *
+     * 处理时间
+     */
+    private Date svrDealDate;
+
+    /**
+     *
+     * 处理结果
+     */
+    private String svrResult;
+
+    /**
+     *
+     * 客户满意度
+     */
+>>>>>>> 1453d2971f83009e6d250beeaaa17367f95960e6
     private Long svrSatisfy;
 
     /**

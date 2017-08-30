@@ -16,9 +16,7 @@
 		 <property name="basePackage" value="com.crm.mapper"></property>
 		 <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
-	
-	<mvc:view-controller path="/common" view-name="common/index" />
-	
+		
 	<!-- 视图处理器 -->  
     <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:order="2"> 
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/> 

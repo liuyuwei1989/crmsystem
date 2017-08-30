@@ -208,7 +208,4 @@
       DICT_IS_EDITABLE = #{dictIsEditable,jdbcType=CHAR}
     where DICT_ID = #{dictId,jdbcType=DECIMAL}
   </update>
-  <select id="selectAll" resultType="com.crm.entity.BasDict">
-  select * from BAS_DICT
-  </select>
 </mapper>

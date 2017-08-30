@@ -7,7 +7,27 @@
     <result column="USR_PASSWORD" jdbcType="VARCHAR" property="usrPassword" />
     <result column="USR_ROLE_ID" jdbcType="DECIMAL" property="usrRoleId" />
     <result column="USR_FLAG" jdbcType="DECIMAL" property="usrFlag" />
+    
+
   </resultMap>
+  
+  
+   <resultMap id="UserResultMap" type="com.crm.entity.SysUser">
+    <id column="USR_ID" jdbcType="DECIMAL" property="usrId" />
+    <result column="USR_NAME" jdbcType="VARCHAR" property="usrName" />
+    <result column="USR_PASSWORD" jdbcType="VARCHAR" property="usrPassword" />
+    <result column="USR_ROLE_ID" jdbcType="DECIMAL" property="usrRoleId" />
+    <result column="USR_FLAG" jdbcType="DECIMAL" property="usrFlag" />
+    
+    <association property="com.crm.entity.SysRole">
+    <id  column="ROLE_ID" jdbcType="Integer" property="roleId"/>
+    <result    column="ROLE_NAME" jdbcType="VARCHAR" property="roleName"       />
+    <result  column="ROLE_DESC" jdbcType="VARCHAR" property="roleDesc"/>
+      <result  column="ROLE_FLAG" jdbcType="BigDecimal" property="roleFlag"/>
+    </association>
+  </resultMap>
+  
+  
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -148,6 +168,18 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+<!--   用于登录查询语句 -->
+  <select id="selectByConditions" parameterType="com.crm.entity.SysUser" resultMap="BaseResultMap">
+  select *from SYS_USER where USR_NAME=#{usrName } and USR_PASSWORD=#{usrPassword}
+  
+  </select>
+  
+  <select id="selectAll" resultMap="UserResultMap" >
+  
+  
+  
+  </select>
+  
   <update id="updateByExampleSelective" parameterType="map">
     update SYS_USER
     <set>

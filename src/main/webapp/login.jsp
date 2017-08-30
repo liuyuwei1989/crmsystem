@@ -71,7 +71,7 @@ h1,h2,h3,h4,h5,h6{font-size:100%;}
 <body>
 <a href="i18NAction?request_locale=zh_CN">中文</a>
 <a href="i18NAction?request_locale=en_US">English</a>
-<form action="userAction_login" id="form1" method="post">
+<form action="user/doLogin.do" id="form1" method="post">
 	<div class="loginPanel">
 		<div class="x-box-tl">
 			<div class="x-box-tr">
@@ -87,28 +87,31 @@ h1,h2,h3,h4,h5,h6{font-size:100%;}
 					<table id="j_id2:j_id5" cellspacing="3px" style="width:100%">
 						<tr>
 						<td align="right" colspan="1" rowspan="1" style="padding-right: 3px;">
-							<label><s:text name="login.username"></s:text>：</label>
+						姓名：
+<!-- 							<label><s:text name="login.username"></s:text>：</label> -->
 						</td>
 						<td colspan="2">
-							<label><input type="text" style="width: 212px;" name="username" class="x-form-text"/></label>
+							<label><input type="text" style="width: 212px;" name="usrName"  value="hlliu" class="x-form-text"/></label>
 						</td>
 						<tr>
 
 						<tr>
 						<td align="right" colspan="1" rowspan="1" style="padding-right: 3px;">
-							<label><s:text name="login.password"></s:text>：</label>
+						密码：
+<!-- 							<label><s:text name="login.password"></s:text>：</label> -->
 						</td>
 						<td colspan="2">
-							<label><input type="password" name="password" style="width: 212px;" class="x-form-text"/></label>
+							<label><input type="password" name="usrPassword" value="pwd" style="width: 212px;" class="x-form-text"/></label>
 						</td>
 						<tr>
 
 						<tr>
 						<td align="right"  style="padding-right: 3px;">
-							<label><s:text name="login.vcode"></s:text>：</label>
+						验证码：
+<!-- 							<label><s:text name="login.vcode"></s:text>：</label> -->
 						</td>
 						<td>
-							<label><input type="text" style="width: 125px;" class="x-form-text" name="code"/></label>
+							<label><input type="text" style="width: 125px;" class="x-form-text" name="code" /></label>
 						</td>
 						<td  style="padding-right: 20px;">
 							<label><img src="vcode.jsp" height="20" width="60" style="cursor:pointer;" title="验证码" /></label>

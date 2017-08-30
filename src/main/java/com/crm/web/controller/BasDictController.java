@@ -13,11 +13,20 @@ import com.crm.service.IBasDictService;
 @Controller
 @RequestMapping("/basDict")
 public class BasDictController {
-	@Resource
+	
 	IBasDictService basDictService;
+	@Resource
+	public void setBasDictService(IBasDictService basDictService) {
+		this.basDictService = basDictService;
+	}
+
 	@RequestMapping("findBasDict")
-	public List<BasDict> findBasDict(){
+	public String findBasDict(){
 		List<BasDict> basDictList= basDictService.findService();
-		return basDictList;
+		for (BasDict basDict : basDictList) {
+			System.out.println(basDict.getDictType());
+		}
+		
+		return "service/newService";
 	}
 }

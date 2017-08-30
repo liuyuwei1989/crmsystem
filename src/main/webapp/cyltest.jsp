@@ -8,5 +8,6 @@
 </head>
 <body>
 <a href="service/addService.do">添加服务</a>
+<a href="basDict/findBasDict.do">测试</a>
 </body>
 </html>

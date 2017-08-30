@@ -1,21 +1,27 @@
 package com.crm.service.impl;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.crm.entity.BasDict;
 import com.crm.mapper.BasDictMapper;
 import com.crm.service.IBasDictService;
+
+
 @Service
-@Transactional
 public class BasDictService implements IBasDictService {
-	@Resource
+	
 	BasDictMapper basDictMapper;
+	@Resource
+	public void setBasDictMapper(BasDictMapper basDictMapper) {
+		this.basDictMapper = basDictMapper;
+	}
+
 	@Override
 	public List<BasDict> findService() {
 		List<BasDict> list = basDictMapper.selectAll();

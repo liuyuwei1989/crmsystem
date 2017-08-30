@@ -19,76 +19,77 @@
 	href="${pageContext.request.contextPath }/css/default.css">
 <script type="text/javascript"
 	src="${pageContext.request.contextPath }/js/easyui/jquery.easyui.min.js"></script>
-<script>
-	$(function() {
-		$('#cc').combobox({
-			url : 'combobox_data.json',
-			valueField : 'id',
-			textField : 'text'
-		});
+
+<!-- <script type="text/javascript">
+$(function(){ 
+      	$('#cc').combobox({
+				url : 'findBasDict.do',
+				valueField : 'id',
+				textField : 'text'
+			}); 
+});
+	/* $.ajax({
+		url : "test.html",
+		cache : false,
+		success : function(html) {
 		
-$('#cc').combobox({    
-    url:'service/findBasDict.do',    
-    valueField:'id',    
-    textField:'text'   
-});  
-
-
-         
-	});
-</script>
+		}
+	}); */
+</script> -->
 </head>
 
 <body>
-<script type="text/javascript">
-$.fn.datebox.defaults.formatter = function(date){
-	var y = date.getFullYear();
-	var m = date.getMonth()+1;
-	var d = date.getDate();
-	return y+'/'+m+'/'+d;
-}
-</script>
+	<script type="text/javascript">
+	
+		$.fn.datebox.defaults.formatter = function(date) {
+			var y = date.getFullYear();
+			var m = date.getMonth() + 1;
+			var d = date.getDate();
+			return y + '/' + m + '/' + d;
+		}
+	</script>
 	<div id="p" class="easyui-panel" title="My Panel"
 		style="width:500px;height:300px;padding:10px;background:#fafafa;"
 		data-options="iconCls:'icon-save',closable:true,    
-                collapsible:true,minimizable:true,maximizable:true">
-		<table border="1" bordercolor="black" width="450" cellspacing="0"
-			cellpadding="5">
-			<tr>
-				<td>编号</td>
-				<td></td>
-				<td>服务类型</td>
-				<td><input id="cc" name="dictValue"></td>
-			</tr>
-			<tr>
-				<td>概要</td>
-				<td><input type="text" style="width: 100%;padding:0px;"></td>
-				<td colspan="2"></td>
-			</tr>
-			<tr>
-				<td>客户</td>
-				<td><input type="text" style="width: 100%;padding:0px;"></td>
-				<td>状态</td>
-				<td>新建</td>
-			</tr>
-			<tr>
-				<td>详细描述</td>
-				<td colspan="3"><textarea style="width: 100%;padding:0px;"></textarea></td>
-			</tr>
-			<tr>
-				<td>创建人</td>
-				<td>cyl</td>
-				<!-- 登录的用户 -->
-				<td>创建时间</td>
-				<td>
-				 <input class="easyui-datetimebox" name="birthday"
-					data-options="required:true,showSeconds:false"
-					showSeconds="true"
-					 value="today"
-					style="width:100%"> 
-					</td>
-			</tr>
-		</table>
+                collapsible:true,minimizable:true,maximizable:true,url:'basDict/findBasDict.do'">
+		<form id="ff" method="post" novalidate>
+			<table border="1" bordercolor="black" width="450" cellspacing="0"
+				cellpadding="5">
+				<tr>
+					<td>编号</td>
+					<td></td>
+					<td>服务类型</td>
+					<td><input id="cc" class="easyui-combobox" name="dept"   
+    data-options="valueField:'dictId',textField:'dictValue',url:'findBasDict.do'" /> 
+
+					</select></td>
+				</tr>
+				<tr>
+					<td>概要</td>
+					<td><input type="text" style="width: 100%;padding:0px;"></td>
+					<td colspan="2"></td>
+				</tr>
+				<tr>
+					<td>客户</td>
+					<td><input type="text" style="width: 100%;padding:0px;"></td>
+					<td>状态</td>
+					<td>新建</td>
+				</tr>
+				<tr>
+					<td>详细描述</td>
+					<td colspan="3"><textarea style="width: 100%;padding:0px;"></textarea></td>
+				</tr>
+				<tr>
+					<td>创建人</td>
+					<td>cyl</td> 登录的用户
+					<td>创建时间</td>
+					<td><input class="easyui-datetimebox" name="birthday"
+						data-options="required:true,showSeconds:false" showSeconds="true"
+						value="today" style="width:100%"></td>
+				</tr>
+			</table>
+
+		</form>
 	</div>
 </body>
 

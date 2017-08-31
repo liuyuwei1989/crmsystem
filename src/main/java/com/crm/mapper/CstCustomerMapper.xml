@@ -26,6 +26,10 @@
     <result column="CUST_NATIONAL_TAX_NO" jdbcType="VARCHAR" property="custNationalTaxNo" />
     <result column="CUST_STATUS" jdbcType="CHAR" property="custStatus" />
   </resultMap>
+  
+  <select id="likeByName" parameterType="String" resultMap="BaseResultMap">
+     select * from CST_CUSTOMER where CUST_NAME like #{custName,jdbcType=VARCHAR}
+  </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

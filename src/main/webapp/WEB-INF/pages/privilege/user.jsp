@@ -58,7 +58,10 @@
 				},{
 					iconCls:'icon-add',
 					handler:function(){
-						alert('add');
+					
+					$('#dlg').dialog('open');
+					
+						
 					}
 				},{
 					iconCls:'icon-edit',
@@ -70,4 +73,81 @@
 		})
 	</script>
 </body>
+
+<!-- 弹出小窗口 -->
+	<div id="dlg" class="easyui-dialog" title="Toolbar and Buttons" hidden="true"
+	style="width:400px;height:200px;padding:10px"
+			data-options="
+				iconCls: 'icon-save',
+				toolbar: [{
+					text:'Add',
+					iconCls:'icon-add',
+					handler:function(){
+						alert('add')
+					}
+				},'-',{
+					text:'Save',
+					iconCls:'icon-save',
+					handler:function(){
+						alert('save')
+					}
+				}],
+				buttons: [{
+					text:'Ok',
+					iconCls:'icon-ok',
+					handler:function(){
+						alert('ok');
+					}
+				},{
+					text:'Cancel',
+					handler:function(){
+						alert('cancel');;
+					}
+				}]
+			">
+		
+<form id="addUser" method="post" novalidate>
+			<table border="1" bordercolor="black" width="450" cellspacing="0"
+				cellpadding="5">
+				<tr>
+					<td>编号</td>
+					<td></td>
+					<td>服务类型</td>
+					<td><input id="cc" class="easyui-combobox" name="dept"   
+    data-options="valueField:'dictId',textField:'dictValue',url:''" /> 
+
+					</select></td>
+				</tr>
+				<tr>
+					<td>概要</td>
+					<td><input type="text" style="width: 100%;padding:0px;"></td>
+					<td colspan="2"></td>
+				</tr>
+				<tr>
+					<td>客户</td>
+					<td><input type="text" style="width: 100%;padding:0px;"></td>
+					<td>状态</td>
+					<td>新建</td>
+				</tr>
+				<tr>
+					<td>详细描述</td>
+					<td colspan="3"><textarea style="width: 100%;padding:0px;"></textarea></td>
+				</tr>
+				<tr>
+					<td>创建人</td>
+					<td>cyl</td> 登录的用户
+					<td>创建时间</td>
+					<td><input class="easyui-datetimebox" name="birthday"
+						data-options="required:true,showSeconds:false" showSeconds="true"
+						value="today" style="width:100%"></td>
+				</tr>
+			</table>
+			</form>
+
+
+
+
+	</div>
+
+
 </html>

@@ -7,6 +7,16 @@
     <result column="ROLE_DESC" jdbcType="VARCHAR" property="roleDesc" />
     <result column="ROLE_FLAG" jdbcType="DECIMAL" property="roleFlag" />
   </resultMap>
+  
+<!-- 查询所有角色 -->
+
+<select id="select" resultMap="BaseResultMap">
+
+select *from SYS_ROLE
+</select>
+  
+  
+  
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

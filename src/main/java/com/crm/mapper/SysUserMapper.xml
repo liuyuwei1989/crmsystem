@@ -19,11 +19,11 @@
     <result column="USR_ROLE_ID" jdbcType="DECIMAL" property="usrRoleId" />
     <result column="USR_FLAG" jdbcType="DECIMAL" property="usrFlag" />
     
-    <association property="com.crm.entity.SysRole">
-    <id  column="ROLE_ID" jdbcType="Integer" property="roleId"/>
+    <association  property="com.crm.entity.SysRole" javaType="com.crm.entity.SysRole">
+    <id  column="ROLE_ID" jdbcType="DECIMAL" property="roleId"/>
     <result    column="ROLE_NAME" jdbcType="VARCHAR" property="roleName"       />
     <result  column="ROLE_DESC" jdbcType="VARCHAR" property="roleDesc"/>
-      <result  column="ROLE_FLAG" jdbcType="BigDecimal" property="roleFlag"/>
+      <result  column="ROLE_FLAG" jdbcType="DECIMAL" property="roleFlag"/>
     </association>
   </resultMap>
   
@@ -174,11 +174,11 @@
   
   </select>
   
-  <select id="selectAll" resultMap="UserResultMap" >
+<!--   <select id="selectAll" resultMap="UserResultMap" > -->
   
   
   
-  </select>
+<!--   </select> -->
   
   <update id="updateByExampleSelective" parameterType="map">
     update SYS_USER

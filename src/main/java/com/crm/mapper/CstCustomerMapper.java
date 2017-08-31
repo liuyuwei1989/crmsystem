@@ -119,4 +119,6 @@ public interface CstCustomerMapper {
     int updateByPrimaryKey(CstCustomer record);
     
     List<CstCustomer> likeByName(String name);
+    
+    List<CstCustomer> selectByCustNameAndManagerName(@Param("cstCustomer")CstCustomer cstCustomer,@Param("page")int page,@Param("rows")int rows);
 }

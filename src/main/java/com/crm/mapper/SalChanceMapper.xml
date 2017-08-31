@@ -368,4 +368,8 @@
       CHC_STATUS = #{chcStatus,jdbcType=CHAR}
     where CHC_ID = #{chcId,jdbcType=DECIMAL}
   </update>
+  
+  <select id="findAllMarket" resultMap="BaseResultMap">
+  	select*from sal_chance
+  </select>
 </mapper>

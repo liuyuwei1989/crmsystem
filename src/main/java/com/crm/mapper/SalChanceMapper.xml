@@ -372,4 +372,6 @@
   <select id="findAllMarket" resultMap="BaseResultMap">
   	select*from sal_chance
   </select>
+  
+ 
 </mapper>

@@ -14,6 +14,7 @@ import com.crm.service.IChanceService;
 //import org.springframework.stereotype.Controller;
 
 @Controller
+@RequestMapping("chanceController")
 public class ChanceController {
 	@Resource
 	private IChanceService chanceService;
@@ -22,5 +23,12 @@ public class ChanceController {
 		List<SalChance> list = chanceService.findAllMarket();
 		System.out.print(list);
 		return list;
+	}
+	//插入
+	@RequestMapping("add")
+	public String add(SalChance salChance){
+		System.out.print(salChance.getChcCreateBy());
+		chanceService.insertSelective(salChance);
+		return null;
 	}
 }

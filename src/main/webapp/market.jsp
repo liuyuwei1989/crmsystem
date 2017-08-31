@@ -4,6 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
+<fmt:formatDate value="${job.jobtime }"pattern="yyyy-MM-dd HH:mm:ss"/> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -42,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			data-options="rownumbers:true,
 			singleSelect:true,
 			pagination:true,
-			url:'findAllMarket.do',
+			url:'chanceController/findAllMarket.do',
 			method:'get'"
 			
 			>
@@ -68,16 +69,133 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</thead>
 	</table>
 	<div id="toolbar">
-	<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New User</a>
-	<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit User</a>
-	<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove User</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New User</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit User</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove User</a>
 </div>
+
+
+<div id="dialog1"  class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px" closed="true">
+
+<form id="ff" method="post">   
+	<div>   
+        <label for="name">客户编号:</label>   
+        <input class="easyui-validatebox" type="text" name="chcId" data-options="required:true" />   
+    </div>  
+    
+    <div>   
+        <label for="name">客户来源:</label>   
+        <input class="easyui-validatebox" type="text" name="chcSource" data-options="required:true" />   
+    </div>   
+    <div>   
+        <label for="name">客户名:</label>   
+        <input class="easyui-validatebox" type="text" name="chcCustName" data-options="validType:'email'" />   
+    </div>  
+     
+     <div>   
+        <label for="name">客户概要:</label>   
+        <input class="easyui-validatebox" type="text" name="chcTitle" data-options="required:true" />   
+    </div>   
+    <div>   
+        <label for="name">成功概率:</label>   
+        <input class="easyui-validatebox" type="text" name="chcRate" data-options="validType:'email'" />   
+    </div>   
+    
+     <div>   
+        <label for="name">联系人:</label>   
+        <input class="easyui-validatebox" type="text" name="chcLinkman" data-options="required:true" />   
+    </div>   
+    <div>   
+        <label for="telephoe">联系人号码:</label>   
+        <input class="easyui-validatebox" type="text" name="chcTel" data-options="validType:'email'" />   
+    </div>   
+     <div>   
+        <label for="name">机会描述:</label>   
+        <input class="easyui-validatebox" type="text" name="chcDesc" data-options="required:true" />   
+    </div> 
+      
+    <div>   
+        <label for="name">创建人编号:</label>   
+        <input class="easyui-validatebox" type="text" name="chcCreateId" data-options="validType:'email'" />   
+    </div>   
+    
+    <div>   
+        <label for="name">创建人:</label>   
+        <input class="easyui-validatebox" type="text" name="chcCreateBy" data-options="required:true" />   
+    </div> 
+    
+    <div>   
+        <label for="name">创建时间:</label>   
+        <input class="easyui-validatebox" type="text" name="chcCreateDate" data-options="required:true" />   
+    </div> 
+    
+    <div>   
+        <label for="name">指派人编号:</label>   
+        <input class="easyui-validatebox" type="text" name="chcDueId" data-options="required:true" />   
+    </div> 
+    
+    <div>   
+        <label for="name">指派人名:</label>   
+        <input class="easyui-validatebox" type="text" name="chcDueTo" data-options="required:true" />   
+    </div> 
+    
+    <div>   
+        <label for="name">指派时间:</label>   
+        <input class="easyui-validatebox" type="text" name="chcDueDate" data-options="required:true" />   
+    </div> 
+    
+    <div>   
+        <label for="name">状态:</label>   
+        <input class="easyui-validatebox" type="text" name="chcStatus" data-options="required:true" />   
+    </div> 
+</form>  
+</div>
+
 	<script>
 		function newUser(){
-			$("#add").dialog({
-			}, function() {
+			
+			$('#dialog1').dialog({
+					title: '新增用户',    
+				    width: 600,    
+				    height: 400,    
+				    closed: false,    
+				    cache: false,       
+				    modal: true ,
+				    buttons:[{
+				         text:'保存',
+				         handler:function(){
+				         	/* $("#ff").form('submit',{
+				         		url:'chanceController/add.do',
+				         		onSubmit:function(){
+				         		},
+				         		success:function(data){
+				         			alert("data")
+				         		}
+				         	
+				         	
+				         	
+				         	}) */
+				         	$.ajax({
+				         		data : $('#ff').serialize(),
+				         		type : 'post',
+				         		url : 'chanceController/add.do',
+				         		success:function(data){
+				         			alert("data")
+				         		}
+				         	})
+				         }
+				        },{text:'关闭',
+				          closed:false	
+				        }
+				    
+				    
+				    ]
+				    
+				    
 				
+			
 			})
+			
 		}
 	</script>
 	

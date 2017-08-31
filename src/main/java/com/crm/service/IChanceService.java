@@ -6,4 +6,8 @@ import com.crm.entity.SalChance;
 
 public interface IChanceService {
 	public List<SalChance> findAllMarket();
+
+	
+
+	void insertSelective(SalChance salChance);
 }

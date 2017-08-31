@@ -2,6 +2,8 @@ package com.crm.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 	/**
 	 * 营销机会表实体类
 	 */
@@ -63,6 +65,7 @@ public class SalChance {
     /**
      * 客户信息创建时间
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date chcCreateDate;
 
     /**
@@ -78,6 +81,7 @@ public class SalChance {
     /**
      * 指派的时间
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date chcDueDate;
 
     /**

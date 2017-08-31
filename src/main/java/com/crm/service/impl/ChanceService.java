@@ -20,5 +20,10 @@ public class ChanceService implements IChanceService{
 		 System.out.println(list);
 		return list;
 	}
+	@Override
+	public void insertSelective(SalChance salChance) {
+		salChanceMapper.insertSelective(salChance);
+		
+	}
 	
 }

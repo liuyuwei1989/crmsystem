@@ -18,7 +18,10 @@ public interface SalChanceMapper {
 
    
     int insert(SalChance record);
-
+    
+    /*
+     * 插入数据
+     */
     int insertSelective(SalChance record);
 
     
@@ -38,6 +41,11 @@ public interface SalChanceMapper {
 
     
     int updateByPrimaryKey(SalChance record);
-
+    
+    /*
+     * 查询所有
+     */
 	List<SalChance> findAllMarket();
+
+	
 }

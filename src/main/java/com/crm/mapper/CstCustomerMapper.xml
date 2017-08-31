@@ -497,4 +497,18 @@
       CUST_STATUS = #{custStatus,jdbcType=CHAR}
     where CUST_NO = #{custNo,jdbcType=CHAR}
   </update>
+  <select id="selectByCustNameAndManagerName" resultMap="BaseResultMap">
+  	select * from CST_CUSTOMER 
+  	<trim prefix="WHERE" prefixOverrides="AND">
+  		<if test="cstCustomer.custName != null and cstCustomer.custName !=''">
+  			AND CUST_NAME like '%${cstCustomer.custName}%'
+  		</if>
+  		<if test="cstCustomer.custManagerName != null and cstCustomer.custManagerName != ''">
+  			AND CUST_MANAGER_NAME like '%${cstCustomer.custManagerName}%'
+  		</if>
+  		<if test="page != null and rows != null" >
+  			AND ROWNUM &gt;= (${page}-1)*${rows} AND ROWNUM &lt; ${page}*${rows} 
+  		</if>
+  	</trim>
+  </select>
 </mapper>

@@ -9,6 +9,12 @@
     <result column="RIGHT_URL" jdbcType="VARCHAR" property="rightUrl" />
     <result column="RIGHT_TIP" jdbcType="VARCHAR" property="rightTip" />
   </resultMap>
+  
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+  
+  select * from SYS_RIGHT
+  </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

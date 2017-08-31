@@ -87,4 +87,5 @@ public interface CstServiceMapper {
      * @mbg.generated Tue Aug 29 10:30:00 CST 2017
      */
     int updateByPrimaryKey(CstService record);
+    
 }

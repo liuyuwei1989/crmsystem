@@ -66,9 +66,9 @@
 					iconCls:'icon-edit',
 					handler:function(){
 					
-// 				var rows = $('#dg').datagrid('getSelections');
-// 				alert(rows);
-// 				var id=rows[0].roleId;
+				var rows = $('#dg').datagrid('getSelections');
+				alert(rows);
+				var id=rows[0].roleId;
 					
 					
 					$.ajax({

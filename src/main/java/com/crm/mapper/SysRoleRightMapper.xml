@@ -6,6 +6,22 @@
     <result column="RF_ROLE_ID" jdbcType="DECIMAL" property="rfRoleId" />
     <result column="RF_RIGHT_CODE" jdbcType="VARCHAR" property="rfRightCode" />
   </resultMap>
+  
+  <insert id="insertRole" parameterType="com.crm.entity.SysRoleRight">
+  	<selectKey resultType="DECIMAL" order="BEFORE" keyProperty="rfId">
+     SELECT sys_role_right_rf_id_seq.NEXTVAL FROM dual
+	</selectKey>
+  
+  insert into SYS_ROLE_RIGHT (RF_ID, RF_ROLE_ID, RF_RIGHT_CODE
+      )
+    values (#{rfId,jdbcType=DECIMAL}, #{rfRoleId,jdbcType=DECIMAL}, #{rfRightCode,jdbcType=VARCHAR}
+      )
+  </insert>
+  
+  
+  
+  
+  
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

@@ -26,6 +26,8 @@ public class RoleController {
 	private IRoleService roleService;
 	@Resource
 	private IRightService rightService;
+	
+	
 		
 	@RequestMapping("find")
 	public @ResponseBody List<SysRole> find(){
@@ -34,7 +36,7 @@ public class RoleController {
 		List<SysRole> list=roleService.find();
 		
 		
-		//System.out.println(list);
+	System.out.println(list);
 		
 		return list;
 	}

@@ -1,6 +1,8 @@
 package com.crm.web.controller;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,25 +11,32 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.crm.entity.SysRight;
 import com.crm.entity.SysRole;
+import com.crm.entity.SysRoleRight;
 import com.crm.service.IRightService;
 import com.crm.service.IRoleService;
+import com.crm.service.ISysRoleRightService;
 
 
 
 @Controller
 @RequestMapping("/role")
 public class RoleController {
+	
 	@Resource
 	private IRoleService roleService;
+	
 	@Resource
 	private IRightService rightService;
 	
-	
+	@Resource
+	private ISysRoleRightService sysRoleRightService;
 		
 	@RequestMapping("find")
 	public @ResponseBody List<SysRole> find(){
@@ -75,14 +84,17 @@ public class RoleController {
 		
 	}
 	
-	
+
 	@RequestMapping("add")
-	public String add(){
+	public void add(Integer id,  String[] rightList){
+	
 		
-		
-		
-		
-	return null;
+		sysRoleRightService.updateRights(id, Arrays.asList(rightList));
+
+
 	}
+	
+	
+	
 
 }

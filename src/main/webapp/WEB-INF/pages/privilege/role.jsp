@@ -30,6 +30,13 @@
 
 
 <body>
+<input type="checkbox" name="roleList[0]" value=1 />
+<input type="checkbox" name="roleList[1]" value=2 />
+<input type="checkbox" name="roleList[2]" value=3 />
+
+<input type="checkbox" name="role" value=1 />
+
+
 <!-- 	<h2>Custom DataGrid Pager</h2> -->
 <!-- 	<p>You can append some buttons to the standard datagrid pager bar.</p> -->
 	<div style="margin:20px 0;"></div>
@@ -68,7 +75,10 @@
 					
 				var rows = $('#dg').datagrid('getSelections');
 			
-				var id=rows[0].roleId;
+				var roleid=rows[0].roleId;
+					
+				$("#rightdis").append
+				("<input type='hidden'  name='id'  value=' "+roleid+"' />");	
 					
 					
 					$.ajax({
@@ -82,14 +92,14 @@
    //var map= $.parseJSON(data);
 
    //alert(data);
-   
+   var i = 0;
    for(var mapSon in data){//循环大json里的key值
-   
+   		
    //大json里的key值对应的vaLue值
    		var child = data[mapSon];
    		if(child["rightParentCode"]=="ROOT_MENU"){
    		 $("#rightdis").append
-   		("<input type='checkbox' name='"+id+"'  value="+child["rightCode"]+" />"+child["rightText"]);
+   		("<input type='checkbox' name=''  value="+child["rightCode"]+" />"+child["rightText"]);
    			$("#rightdis").append("</br></br>");
    		for(var mapSons in data){
    			var childs=data[mapSons];
@@ -97,7 +107,7 @@
    			if(child["rightCode"]==childs["rightParentCode"]){
    		
    			 $("#rightdis").append
-   			("<input type='checkbox' name='"+id+"'  value="+childs["rightCode"]+" />"+childs["rightText"]);
+   			("<input type='checkbox' name='rightList'  value="+childs["rightCode"]+" />"+childs["rightText"]);
    		
    		
    			}
@@ -133,7 +143,7 @@ $('#dlg').dialog('open');
 </body>
 
 <!-- 弹出小窗口 -->
-<form id="ff">
+
 	<div id="dlg" class="easyui-dialog" title="权限管理" 
 	style="width:600px;height:400px;padding:10px" closed="true"
 			data-options="
@@ -156,18 +166,18 @@ $('#dlg').dialog('open');
 
 
     
-    
+   <form id="ff"> 
     <div  id="rightdis">
     
     
     </div>
     
 
-
+</form>
 
 
 	</div>
-</form>
+
 
 
 <script type="text/javascript">

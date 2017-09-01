@@ -19,6 +19,10 @@
   </insert>
   
   
+ <delete id="deleteRole" parameterType="DECIMAL">
+    delete from SYS_ROLE_RIGHT
+    where RF_ROLE_ID = #{rfRoleId,jdbcType=DECIMAL}
+  </delete>
   
   
   

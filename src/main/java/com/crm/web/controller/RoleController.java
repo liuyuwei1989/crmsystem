@@ -80,7 +80,7 @@ public class RoleController {
 		
 		
 		
-	return "index";
+	return null;
 	}
 
 }

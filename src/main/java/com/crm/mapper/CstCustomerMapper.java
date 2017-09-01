@@ -117,11 +117,8 @@ public interface CstCustomerMapper {
      * @mbg.generated Tue Aug 29 10:30:00 CST 2017
      */
     int updateByPrimaryKey(CstCustomer record);
-
     
     List<CstCustomer> likeByName(String name);
     
     List<CstCustomer> selectByCustNameAndManagerName(@Param("cstCustomer")CstCustomer cstCustomer,@Param("page")int page,@Param("rows")int rows);
-
-
 }
